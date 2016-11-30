@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="1209.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yyHaker.lexical.view.SyntaxController">
+   <children>
+      <TableView fx:id="firstListTable" layoutX="-1.0" layoutY="1.0" prefHeight="392.0" prefWidth="323.0" AnchorPane.leftAnchor="-1.0" AnchorPane.topAnchor="1.0">
+         <padding>
+            <Insets bottom="1.0" right="1.0" />
+         </padding>
+      </TableView>
+      <TableView fx:id="analysisTable" layoutX="13.0" layoutY="381.0" prefHeight="265.0" prefWidth="769.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+         <padding>
+            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+         </padding>
+      </TableView>
+      <TableView fx:id="grammarTable" layoutX="844.0" layoutY="395.0" prefHeight="265.0" prefWidth="437.0" AnchorPane.bottomAnchor="1.0" AnchorPane.rightAnchor="1.0">
+         <padding>
+            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+         </padding>
+      </TableView>
+      <TableView fx:id="followListTable" layoutX="323.0" layoutY="1.0" prefHeight="392.0" prefWidth="446.0">
+         <padding>
+            <Insets bottom="1.0" right="1.0" />
+         </padding>
+      </TableView>
+      <TableView fx:id="selectListTable" layoutX="773.0" layoutY="-10.0" prefHeight="392.0" prefWidth="437.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+         <padding>
+            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+         </padding>
+      </TableView>
+   </children>
+
+    <!--css样式配置路径-->
+    <stylesheets>
+        <URL value="@lexical.css" />
+    </stylesheets>
+</AnchorPane>

@@ -1,0 +1,56 @@
+program->p
+p->D p
+p->S p
+p->$
+D->T IDN init ;
+D->proc IDN { D S }
+init->= const
+init->$
+T->X C
+T->record
+X->short
+X->int
+X->long
+X->float
+X->double
+X->char
+C->[ param ] C
+C->$
+param->const
+param->$
+S->L = E ;
+S->if B then S else S
+S->while B do S
+S->call IDN ( Elist ) ;
+const->INT10
+const->INT8
+const->INT16
+E->G E'
+E'->+ G E'
+E'->$
+G->F G'
+G'->* F G'
+G'->$
+L->IDN L'
+L'->[ param ] L'
+L'->$
+B->H B'
+B'->or H B'
+B'->$
+H->I H'
+H'->and I H'
+H'->$
+I->! B
+I->( B )
+I->E relop E
+I->true
+I->false
+relop-><
+relop-><=
+relop->==
+relop->!=
+relop->>=
+relop->>
+Elist->E Elist'
+Elist'->, E Elist'
+Elist'->$

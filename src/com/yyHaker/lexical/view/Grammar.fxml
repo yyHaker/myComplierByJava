@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="659.0" prefWidth="964.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yyHaker.lexical.view.GrammarController">
+   <children>
+      <TableView fx:id="syntaxErrorTable" layoutX="1.0" layoutY="239.0" prefHeight="212.0" prefWidth="652.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="312.0">
+        <columns>
+          <TableColumn fx:id="tokenError" prefWidth="116.0" text="词法单元Token" />
+          <TableColumn fx:id="errorKind" prefWidth="433.0" text="语法及语义错误详情" />
+            <TableColumn fx:id="row" prefWidth="238.0" text="行号" />
+        </columns>
+      </TableView>
+      <TextArea fx:id="syntaxArea" layoutX="1.0" layoutY="38.0" prefHeight="408.0" prefWidth="229.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="38.0" />
+      <TreeView fx:id="syntaxTree" layoutX="460.0" layoutY="38.0" prefHeight="408.0" prefWidth="246.0" AnchorPane.rightAnchor="490.0" AnchorPane.topAnchor="38.0" />
+      <MenuBar layoutY="-1.0" prefHeight="38.0" prefWidth="964.0">
+        <menus>
+          <Menu fx:id="semantic" mnemonicParsing="false" onAction="#beginSemantic" text="semantic">
+            <items>
+              <MenuItem mnemonicParsing="false" text="BeginSemantic" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TextArea fx:id="fourElementArea" layoutX="712.0" layoutY="37.0" prefHeight="408.0" prefWidth="254.0" />
+      <TextArea fx:id="triplesArea" layoutX="474.0" layoutY="40.0" prefHeight="408.0" prefWidth="238.0" />
+      <TableView fx:id="symbolTable" layoutX="650.0" layoutY="447.0" prefHeight="212.0" prefWidth="316.0">
+         <columns>
+            <TableColumn fx:id="symbolTableColumn" prefWidth="97.0" text="符号" />
+            <TableColumn fx:id="typeColumn" prefWidth="143.0" text="符号类型" />
+            <TableColumn fx:id="offsetColumn" prefWidth="74.0" text="偏移量" />
+         </columns>
+      </TableView>
+   </children>
+
+    <!--css样式配置路径-->
+    <stylesheets>
+        <URL value="@lexical.css" />
+    </stylesheets>
+</AnchorPane>
